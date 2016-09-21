@@ -1,18 +1,19 @@
 # TTNavigationBar-alpha
 滑动tableview  导航栏渐变，导航栏文字上移
 本文所引用的布局类cocopods进行安装
+
 pod ‘Masonry’
+
 #import <Masonry/Masonry.h>
+
 按照顺序添加视图
+
+
 #pragma mark-- 生命周期
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.title = @"FadeNavigationDemo";
        self.tableView.rowHeight = 100;
-    
-    
-    
     self.navigationController.navigationBar.hidden = YES;
     [self.view addSubview:self.scaleImageView];    // 设置展示图片的约束
     [_scaleImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -37,7 +38,8 @@ pod ‘Masonry’
 
 创建自定义导航视图
 // 注意:毛玻璃效果API是iOS8的,适配iOS8以下的请用其他方法
--(void)setNavigationSubView{
+
+ -(void)setNavigationSubView{
     // 毛玻璃背景
     UIImageView *bgImgView = [[UIImageView alloc] initWithFrame:_navigationView.bounds];
     bgImgView.image = [UIImage imageNamed:@"DialBackground"];
@@ -83,6 +85,7 @@ pod ‘Masonry’
 }
 
 滚动导航渐变代码
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     // 计算当前偏移位置
