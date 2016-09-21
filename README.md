@@ -30,8 +30,6 @@ pod ‘Masonry’
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.navigationView];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    
-    
     // 直接添加到控制器的View上面,注意添加顺序,在添加导航栏之后,否则会被遮盖住
     [self configNavigationBar];
 }
